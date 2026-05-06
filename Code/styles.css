@@ -1,0 +1,663 @@
+/* CSS code */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Arimo', sans-serif;
+  background: #f4f4f4;
+  color: #222;
+  line-height: 1.4;
+}
+
+/* Top Bar */
+.topbar {
+  height: 68px;
+  background: #f7f2de;
+  border-bottom: 1px solid #0B0A08;
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  align-items: center;
+  padding: 0 28px;
+}
+
+.logo {
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-family: 'Frank Ruhl Libre', serif;
+  font-weight: 300;
+  justify-self: center;
+  color: #212121;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Prevent color change on hover */
+.logo:hover {
+  color: #212121;
+}
+
+/* Hamburger menu */
+.menu,
+.menu-btn {
+  all: unset;
+  justify-self: start;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  color: #0B0A08;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn:hover {
+  opacity: 40%;
+}
+
+.menu {
+  font-size: 36px;
+}
+
+.status-dot {
+  justify-self: end;
+  width: 48px;
+  height: 36px;
+  background: #27c36a;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #183a27;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Side Menu */
+.side-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 475px;
+  height: 960px;
+  background: #008F51;
+  z-index: 20;
+  transform: translateX(-100%);
+  transition: transform 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu.open {
+  transform: translateX(0);
+}
+
+.side-menu-header {
+  height: 68px;
+  border-bottom: 1px solid #0B0A08;
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  color: #0B0A08;
+  padding-left: 14px;
+  justify-self: start;
+}
+
+.close-btn:hover {
+  opacity: 40%;
+}
+
+/* Logo hidden on desktop */
+.side-menu-logo {
+  display: none;
+}
+
+/* Menu links (DESKTOP) */
+.menu-links a,
+.checkout-link {
+  color: #0B0A08;
+  text-decoration: none;
+  font-family: 'Arimo', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+.menu-links a:hover,
+.checkout-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.menu-links {
+  margin-top: 165px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkout-link {
+  margin-top: auto;
+  margin-bottom: 80px;
+  align-self: center;
+}
+
+/* Overlay */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  z-index: 10;
+  display: none;
+}
+
+.menu-overlay.open {
+  display: block;
+}
+
+/* ===================== */
+/* MOBILE */
+/* ===================== */
+@media (max-width: 768px) {
+  .side-menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .side-menu-header {
+    height: 68px;
+  }
+
+  .close-btn {
+    font-size: 36px;
+  }
+
+  /* Logo only on mobile */
+  .side-menu-logo {
+    display: block;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #0B0A08;
+    text-decoration: none;
+    justify-self: center;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .side-menu-logo:hover {
+    color: #0B0A08;
+  }
+
+  .menu-links {
+    margin-top: 100px;
+  }
+
+  /* Menu links (MOBILE) */
+  .menu-links a,
+  .checkout-link {
+    font-size: 24px;
+  }
+
+  .checkout-link {
+    margin-bottom: 100px;
+  }
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  min-height: 600px;
+  max-height: 850px;
+  background-image: url("./Images/a208d3071d7d0997b70f79c330d5fbd100762fd6.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.18);
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.overlay h1 {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-weight: 300;
+  font-size: 200px;
+  letter-spacing: 6px;
+}
+
+.overlay p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 36px;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+.line {
+  width: 1px;
+  height: 208px;
+  background: white;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .overlay h1 {
+    font-size: 75px;
+  }
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card {
+  background: #f8f8f8;
+  padding: 70px 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.card h2 {
+  font-family: 'Arimo', sans-serif;
+  font-size: 36px;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.card small {
+  display: block;
+  margin-bottom: 25px;
+  font-family: 'Frank Ruhl Libre', serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.card img {
+  width: 100%;
+  max-width: 320px;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 16px;
+}
+
+.card p {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.card button {
+  width: 320px;
+  height: 44px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #dc4131;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: 'Arimo', sans-serif;
+  font-size: 14px;
+}
+
+.card button:hover {
+  background: #AE2E21;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* How it works */
+.how-it-works {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background: #f7f2de;
+}
+
+.how-it-works a {
+  font-family: 'Arimo', sans-serif;
+  font-size: 14px;
+  color: #0B0A08;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 16px;
+}
+
+.how-it-works a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.left-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #999;
+  padding: 40px;
+  text-align: center;
+}
+
+.left-title h2 {
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.steps .step {
+  border: 1px solid #999;
+  padding: 40px 70px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  column-gap: 60px;
+  align-items: center;
+}
+
+.step h3 {
+  font-size: 20px;
+  margin: 0;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 400;
+}
+
+.step p {
+  font-size: 16px;
+  margin: 0;
+  max-width: 520px;
+}
+
+.step a {
+  grid-column: 2;
+}
+
+@media (max-width: 768px) {
+  .how-it-works {
+    grid-template-columns: 1fr;
+  }
+
+  .left-title {
+    padding: 30px;
+  }
+
+  .steps .step {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+    row-gap: 16px;
+  }
+
+  .step a {
+    grid-column: 1;
+  }
+}
+
+/* Products */
+.products {
+  padding: 50px 30px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.products h2 {
+  font-size: 32px;
+  margin-bottom: 35px;
+  font-weight: 400;
+}
+
+.product-grid {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.product-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.product {
+  flex: 0 0 75%;
+  scroll-snap-align: start;
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+}
+
+.product-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.basket-btn {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  border: none;
+  background: #000;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.basket-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #222;
+}
+
+.basket-btn span {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.basket-btn:hover {
+  background: #333;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 14px 8px 0;
+  gap: 16px;
+}
+
+.product-info h4 {
+  font-size: 18px;
+  margin: 0 0 8px;
+  font-weight: 400;
+}
+
+.product-info p {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+}
+
+.product-info > span {
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: visible;
+  }
+
+  .product {
+    flex: initial;
+  }
+
+  .product-image img {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .products {
+    padding: 70px 60px;
+  }
+
+  .product-image img {
+    height: 360px;
+  }
+}
+
+/* Footer */
+footer {
+  background: #df3d30;
+  color: white;
+  padding: 36px 22px 72px;
+}
+
+footer h2 {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: 48px;
+  font-weight: 300;
+  margin: 0 0 42px;
+  padding-left: 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.newsletter {
+  margin-left: 22px;
+  max-width: 360px;
+}
+
+.newsletter h3 {
+  font-family: 'Arimo', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin: 0 0 18px;
+}
+
+.newsletter p {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.25;
+  margin: 0 0 28px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  font-family: 'Arimo', sans-serif;
+  font-size: 16px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: 'Arimo', sans-serif;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: #e8f0f5;
+  color: black;
+  font-size: 16px;
+  font-family: 'Arimo', sans-serif;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #c8d4db;
+  transition: background 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 42px 17px 74px;
+  }
+
+  footer h2 {
+    margin-bottom: 56px;
+    padding-left: 20px;
+  }
+
+  .newsletter {
+    margin-left: 17px;
+    max-width: none;
+  }
+
+  .newsletter h3 {
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
+
+  .newsletter p {
+    font-size: 18px;
+    max-width: 330px;
+    margin-bottom: 52px;
+  }
+
+  form {
+    gap: 14px;
+    max-width: 390px;
+  }
+
+  input,
+  form button {
+    font-size: 18px;
+    padding: 14px 13px;
+    border-radius: 5px;
+  }
+}
