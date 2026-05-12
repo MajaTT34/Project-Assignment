@@ -6,12 +6,33 @@
   box-sizing: border-box;
 }
 
+html.open-chat-loading body {
+  visibility: hidden;
+}
+
+html.open-chat-loading body.chat-ready {
+  visibility: visible;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* Body */
 body {
   font-family: 'Arimo', sans-serif;
   background: #f4f4f4;
   color: #222;
   line-height: 1.4;
+  padding-top: 68px;
+}
+
+/* Body product page */
+.products-page {
+  background: #f7f2de;
 }
 
 /* Top Bar */
@@ -23,6 +44,11 @@ body {
   grid-template-columns: 80px 1fr 80px;
   align-items: center;
   padding: 0 28px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
 }
 
 .logo {
@@ -37,7 +63,6 @@ body {
   cursor: pointer;
 }
 
-/* Prevent color change on hover */
 .logo:hover {
   color: #212121;
 }
@@ -86,7 +111,7 @@ body {
   width: 475px;
   height: 960px;
   background: #008F51;
-  z-index: 20;
+  z-index: 20000;
   transform: translateX(-100%);
   transition: transform 0.25s ease;
   display: flex;
@@ -120,12 +145,10 @@ body {
   opacity: 40%;
 }
 
-/* Logo hidden on desktop */
 .side-menu-logo {
   display: none;
 }
 
-/* Menu links (DESKTOP) */
 .menu-links a,
 .checkout-link {
   color: #0B0A08;
@@ -156,12 +179,11 @@ body {
   align-self: center;
 }
 
-/* Overlay */
 .menu-overlay {
   position: fixed;
   inset: 0;
   background: transparent;
-  z-index: 10;
+  z-index: 1500;
   display: none;
 }
 
@@ -169,9 +191,7 @@ body {
   display: block;
 }
 
-/* ===================== */
-/* MOBILE */
-/* ===================== */
+/* Mobile menu */
 @media (max-width: 768px) {
   .side-menu {
     position: fixed;
@@ -187,7 +207,6 @@ body {
     font-size: 36px;
   }
 
-  /* Logo only on mobile */
   .side-menu-logo {
     display: block;
     font-family: 'Frank Ruhl Libre', serif;
@@ -209,7 +228,6 @@ body {
     margin-top: 100px;
   }
 
-  /* Menu links (MOBILE) */
   .menu-links a,
   .checkout-link {
     font-size: 24px;
@@ -316,7 +334,7 @@ body {
   margin-bottom: 20px;
 }
 
-.card button {
+.card-button {
   width: 320px;
   height: 44px;
   margin: 0 auto;
@@ -332,9 +350,10 @@ body {
   gap: 10px;
   font-family: 'Arimo', sans-serif;
   font-size: 14px;
+  text-decoration: none;
 }
 
-.card button:hover {
+.card-button:hover {
   background: #AE2E21;
   transition: background 0.2s ease, transform 0.2s ease;
 }
@@ -429,8 +448,15 @@ body {
 /* Products */
 .products {
   padding: 50px 30px;
-  background: #fff;
   overflow: hidden;
+}
+
+body:not(.products-page) .products {
+  background: #fff;
+}
+
+.products-page .products {
+  background: #f7f2de;
 }
 
 .products h2 {
@@ -552,6 +578,68 @@ body {
   }
 }
 
+/* Partner Farms */
+.partner-farms {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 360px;
+  background: #f7f2de;
+  border-top: 1px solid #0B0A08;
+  border-bottom: 8px solid #df3d30;
+}
+
+.partner-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #0B0A08;
+  text-align: center;
+  padding: 40px;
+}
+
+.partner-title h2 {
+  font-family: 'Arimo', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.partner-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px;
+}
+
+.partner-map iframe {
+  max-width: 640px;
+  height: 260px;
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .partner-farms {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-title {
+    border-right: none;
+    border-bottom: 1px solid #0B0A08;
+  }
+
+  .partner-title h2 {
+    font-size: 24px;
+  }
+
+  .partner-map {
+    padding: 30px 20px;
+  }
+
+  .partner-map iframe {
+    height: 260px;
+  }
+}
+
 /* Footer */
 footer {
   background: #df3d30;
@@ -589,7 +677,7 @@ footer h2 {
   margin: 0 0 28px;
 }
 
-form {
+.newsletter form {
   display: flex;
   flex-direction: column;
   gap: 13px;
@@ -606,7 +694,7 @@ input {
   font-family: 'Arimo', sans-serif;
 }
 
-form button {
+.newsletter form button {
   width: 100%;
   padding: 10px;
   border: none;
@@ -618,7 +706,7 @@ form button {
   cursor: pointer;
 }
 
-form button:hover {
+.newsletter form button:hover {
   background: #c8d4db;
   transition: background 0.2s ease;
 }
@@ -649,15 +737,203 @@ form button:hover {
     margin-bottom: 52px;
   }
 
-  form {
+  .newsletter form {
     gap: 14px;
     max-width: 390px;
   }
 
   input,
-  form button {
+  .newsletter form button {
     font-size: 18px;
     padding: 14px 13px;
     border-radius: 5px;
   }
+}
+
+/* Chat */
+.chat-body {
+  background: #f4f4f4;
+}
+
+.chat-page {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  width: 100%;
+  height: calc(100dvh - 68px);
+  background-image: url("./Images/a208d3071d7d0997b70f79c330d5fbd100762fd6.png");
+  background-size: cover;
+  background-position: center;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 20px;
+  z-index: 900;
+}
+
+.chat-page.open {
+  display: flex;
+}
+
+.chat-window {
+  width: 510px;
+  height: 720px;
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+.chat-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.user-row {
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.chat-name {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: 16px;
+  width: 44px;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.chat-bubble {
+  max-width: 75%;
+  min-height: 39px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.35;
+  display: flex;
+  align-items: center;
+}
+
+.bot-bubble {
+  background: #f7f2de;
+}
+
+.user-bubble {
+  background: #e4eef4;
+}
+
+.loading-bubble {
+  background: #f7f2de;
+  height: 39px;
+  padding: 12px 16px;
+  font-size: 18px;
+  letter-spacing: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-message {
+  display: none;
+  color: #e43d30;
+  border: 1px solid #e43d30;
+  border-radius: 4px;
+  text-align: center;
+  padding: 8px;
+  font-size: 13px;
+  margin-top: 25px;
+}
+
+.error-message.show {
+  display: block;
+}
+
+.chat-form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.chat-form textarea {
+  flex: 1;
+  min-width: 0;
+  height: 61px;
+  resize: none;
+  border: none;
+  background: #dfe7ed;
+  border-radius: 16px;
+  padding: 16px 18px;
+  font-family: 'Arimo', sans-serif;
+  font-size: 16px;
+  outline: none;
+  line-height: 1.4;
+}
+
+.chat-form button {
+  flex: 0 0 56px;
+  width: 56px;
+  min-width: 56px;
+  height: 44px;
+  border: none;
+  border-radius: 16px;
+  background: #df3d30;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-form button:hover {
+  background: #b93024;
+}
+
+@media (max-width: 768px) {
+  .chat-page {
+    top: 68px;
+    width: 100%;
+    height: calc(100dvh - 68px);
+    background: white;
+    padding: 0;
+    display: none;
+    z-index: 900;
+  }
+
+  .chat-page.open {
+    display: block;
+  }
+
+  .chat-window {
+    width: 100%;
+    max-width: none;
+    height: calc(100dvh - 68px);
+    min-height: calc(100dvh - 68px);
+    margin: 0;
+    border-radius: 0;
+    padding: 16px 14px 18px;
+  }
+
+  .chat-bubble {
+    max-width: 78%;
+    font-size: 16px;
+  }
+
+  .chat-form textarea {
+    height: 44px;
+    }
 }

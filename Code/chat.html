@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRAM Chat</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="chat-body">
+  <header class="topbar">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <a href="index.html" class="logo">FRAM</a>
+    <div class="status-dot">0</div>
+  </header>
+
+  <nav class="side-menu" id="sideMenu">
+    <div class="side-menu-header">
+      <button class="close-btn" id="closeMenu" aria-label="Close menu">×</button>
+      <a href="index.html" class="side-menu-logo">FRAM</a>
+      <div></div>
+    </div>
+
+    <div class="menu-links">
+      <a href="products.html">PRODUCTS</a>
+      <a href="chat.html">CHAT</a>
+    </div>
+
+    <a href="#" class="checkout-link">CHECKOUT</a>
+  </nav>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <section class="chat-page open">
+    <div class="chat-window">
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-row bot-row">
+          <span class="chat-name">FRAM</span>
+          <div class="chat-bubble bot-bubble">What can I help you with today?</div>
+        </div>
+      </div>
+
+      <div class="error-message" id="errorMessage">
+        Failed to connect. Wait and try again later.
+      </div>
+
+      <form class="chat-form" id="chatForm">
+        <textarea id="chatInput" rows="1"></textarea>
+        <button type="submit" id="sendBtn">↑</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | FRAM</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="products-page">
+
+  <!-- Header -->
+  <header class="topbar">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <a href="index.html" class="logo">FRAM</a>
+    <div class="status-dot">0</div>
+  </header>
+
+  <nav class="side-menu" id="sideMenu">
+    <div class="side-menu-header">
+      <button class="close-btn" id="closeMenu" aria-label="Close menu">×</button>
+      <a href="index.html" class="side-menu-logo">FRAM</a>
+      <div></div>
+    </div>
+
+    <div class="menu-links">
+      <a href="products.html">PRODUCTS</a>
+      <a href="chat.html">CHAT</a>
+    </div>
+
+    <a href="#" class="checkout-link">CHECKOUT</a>
+  </nav>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- Products Page Content -->
+  <main class="products-page">
+    <section class="products">
+      <h2>OUR PRODUCE</h2>
+
+      <div class="product-grid">
+        <article class="product">
+          <div class="product-image">
+            <img src="./Images/92e4a0dc87745e648e6ad654e16c14d6c05d9b00.png" alt="Oats" />
+            <button class="basket-btn">Add to basket <span>↑</span></button>
+          </div>
+
+          <div class="product-info">
+            <div>
+              <h4>Oats</h4>
+              <p>1 kg</p>
+            </div>
+            <span>48 kr / kg</span>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-image">
+            <img src="./Images/158bf316431f6af438f017834faa025d182d6134.png" alt="Red onions" />
+            <button class="basket-btn">Add to basket <span>↑</span></button>
+          </div>
+
+          <div class="product-info">
+            <div>
+              <h4>Red Onions</h4>
+              <p>0.5 kg</p>
+            </div>
+            <span>48 kr / kg</span>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-image">
+            <img src="./Images/94ef6cc51e2f35d84c7e484720d9db8ac961e1a8.png" alt="Garlic" />
+            <button class="basket-btn">Add to basket <span>↑</span></button>
+          </div>
+
+          <div class="product-info">
+            <div>
+              <h4>Garlic</h4>
+              <p>0.2 kg</p>
+            </div>
+            <span>48 kr / kg</span>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-image">
+            <img src="./Images/9e56c2598026398c668abf9bacf563a59d157218.png" alt="Potato" />
+            <button class="basket-btn">Add to basket <span>↑</span></button>
+          </div>
+
+          <div class="product-info">
+            <div>
+              <h4>Potato</h4>
+              <p>1 kg</p>
+            </div>
+            <span>32 kr / kg</span>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-image">
+            <img src="./Images/5499c44187879a02f2a7525d9d0f6d70105cec4d.png" alt="Carrots" />
+            <button class="basket-btn">Add to basket <span>↑</span></button>
+          </div>
+
+          <div class="product-info">
+            <div>
+              <h4>Carrots</h4>
+              <p>1 kg</p>
+            </div>
+            <span>48 kr / kg</span>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- Partner Farms Map -->
+<section class="partner-farms">
+  <div class="partner-title">
+    <h2>SEE OUR<br>PARTNERING FARMS</h2>
+  </div>
+
+  <div class="partner-map">
+    <iframe
+      src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Braastad+Gaard+Norway"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <h2>FRAM</h2>
+
+    <div class="newsletter">
+      <h3>STAY UPDATED</h3>
+      <p>Sign up for our newsletter to be the first to know about new produce or other exciting news!</p>
+
+      <form>
+        <input type="text" placeholder="First name" />
+        <input type="email" placeholder="E-mail address" />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
