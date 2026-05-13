@@ -460,7 +460,7 @@ body:not(.products-page) .products {
 }
 
 .products h2 {
-  font-size: 32px;
+  font-size: 36px;
   margin-bottom: 35px;
   font-weight: 400;
 }
@@ -577,12 +577,17 @@ body:not(.products-page) .products {
     height: 360px;
   }
 }
+@media (max-width: 768px) {
+  .products h2 {
+    font-size: 24px;
+  }
+}
+
 
 /* Partner Farms */
 .partner-farms {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  min-height: 360px;
+  grid-template-columns: 38% 62%;
   background: #f7f2de;
   border-top: 1px solid #0B0A08;
   border-bottom: 8px solid #df3d30;
@@ -608,16 +613,18 @@ body:not(.products-page) .products {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 70px;
+  padding: 60px;
+  overflow: hidden;
 }
 
 .partner-map iframe {
-  max-width: 640px;
-  height: 260px;
+  width: min(100%, 745px);
+  height: 478px;
   border-radius: 16px;
 }
 
-@media (max-width: 768px) {
+/* Tablet */
+@media (max-width: 1000px) {
   .partner-farms {
     grid-template-columns: 1fr;
   }
@@ -627,16 +634,33 @@ body:not(.products-page) .products {
     border-bottom: 1px solid #0B0A08;
   }
 
+  .partner-map {
+    padding: 40px 24px;
+  }
+
+  .partner-map iframe {
+    width: 100%;
+    max-width: 745px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .partner-title {
+    padding: 60px 20px;
+  }
+
   .partner-title h2 {
     font-size: 24px;
   }
 
   .partner-map {
-    padding: 30px 20px;
+    padding: 25px;
   }
 
   .partner-map iframe {
-    height: 260px;
+    width: 100%;
+    height: 459px;
   }
 }
 
