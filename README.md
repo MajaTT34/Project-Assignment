@@ -13,13 +13,13 @@ The project includes:
 
 •	A product listing page with available products
 
-•	A chatbot for questions
+•	A chatbot powered by the OpenAI API
 
 •	A form in the footer to sign up for newsletter
 
-•	Integration with the Google Maps API to display locations and improve user experience
+•	Integration with the Google Maps API to display partner farm locations
 
-The website is designed with responsiveness, accessibility, and performance in mind, following modern frontend development practices.
+The website is designed with responsiveness, accessibility, and performance in mind.
 
 
 ## **Setup and Installation**
@@ -34,7 +34,7 @@ Google Maps API
 This project uses the Google Maps Embed API to display the farm location on the products page.
 o	For security reasons, the API key is not included in this repository. A placeholder (`YOUR_API_KEY`) is used instead.
 
-How to add your API key
+**How to add your API key**
 1.	Create a Google Maps API key through Google Cloud Console: https://console.cloud.google.com/
 
     a.	Sign in with Google
@@ -49,9 +49,9 @@ How to add your API key
 
     f.	Click:
 
-        o	Create Credentials	
+       •	Create Credentials	
 
-        o	API Key
+       •	API Key
 
 2.	Open `products.html`
 3.	Find this code:
@@ -70,6 +70,33 @@ How to add your API key
 4.	Replace YOUR_API_KEY with your own Google Maps API Key
 5.	Open index.html or products.html in your browser
 
+
+**OpenAI API**
+
+This project uses the OpenAI API to power the chatbot on the chat page. Users can ask questions about products and services. The API connection is implemented using JavaScript fetch requests with async/await. Error handling is included through try/catch blocks to display feedback if the API request fails.
+
+For security reasons, the API key is not included in this repository. A placeholder (DIN_OPENAI_API_KEY_HER) is used instead.
+
+**How to add your OpenAI API key**
+1.	Create an OpenAI account at:
+https://platform.openai.com/
+2.	Generate an API key:
+    •	Go to: API Keys
+    •	Click: Create new secret key
+3.	Open script.js
+4.	Find this code:
+const apiKey = "DIN_OPENAI_API_KEY_HER";
+5.	Replace the placeholder with your own OpenAI API key
+
+Important:
+Do not upload your real API key to GitHub.
+
+## **Ethical considerations:**
+AI-generated responses may sometimes contain incorrect or misleading information. Because of this, the chatbot is designed to provide short and general answers only. 
+
+The project does not store user conversations or personal data. Users are advised not to share personal or sensitive information in the chatbot.
+
+
 ## **How to run locally**
 You can run the project locally by:
 
@@ -78,12 +105,35 @@ You can run the project locally by:
 •	Using the VS Code Live Server extension for a better development experience
 No additional installations or backend setup are required.
 
+## **Technologies Used**
+•	HTML5
+
+•	CSS3
+
+•	JavaScript (ES6)
+
+•	OpenAI API
+
+•	Google Maps Embed API
+
+## **Accessibility**
+•	Semantic HTML
+
+•	ARIA attributes
+
+•	Keyboard navigation support
+
+•	Responsive design
+
+•	Accessible labels and screen-reader support
+
+
 ## **Known Limitations**
 •	The project does not include a backend or database
 
 •	Products and form submissions are static and not permanently stored
 
-•	Google Maps functionality requires an internet connection and a valid API key
+•	Google Maps and OpenAI functionality require an internet connection and valid API keys
 
 •	No payment or checkout system is implemented
 
