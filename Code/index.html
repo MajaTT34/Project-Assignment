@@ -11,7 +11,14 @@
 
 <body>
   <header class="topbar">
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <button 
+        class="menu-btn" 
+        id="menuBtn" 
+        aria-label="Open menu" 
+        aria-expanded="false"
+        aria-controls="sideMenu">
+        ☰
+    </button>
     <a href="index.html" class="logo">FRAM</a>
     <div class="status-dot">0</div>
   </header>
@@ -52,7 +59,7 @@
 
     <div class="card">
       <h2>ASK US ABOUT<br>ANYTHING</h2>
-      <small>Ask your questions answered</small>
+      <small>All your questions answered</small>
       <img src="./Images/c25deee9c80f790a131451b92d7231f3281e9aed.png" alt="Farmer" />
       <p>New produce is added continuously as time<br>goes by and the seasons change.</p>
       <a href="chat.html" class="card-button">Go to chat</a>
@@ -67,29 +74,29 @@
     <div class="steps">
       <div class="step">
         <h3>ORDER GROCERIES</h3>
-        <p>Browse our seasonal selection, choose your items, and place your order online.</p>
+        <p>Fram is a circular service that ensures your kitchen is always stocked with the essentials you need. Browse our seasonal selection, choose your items, and place your order online.</p>
         <a href="products.html">See our stock here</a>
       </div>
 
       <div class="step">
         <h3>STOCK UP</h3>
-        <p>Once your order arrives, unpack the produce and store it however it works best for you.</p>
+        <p>Once your order arrives, unpack the produce and store it however it works best for you. Hold onto the containers— they’re yours to keep until your next order.</p>
       </div>
 
       <div class="step">
         <h3>SCAN & REORDER</h3>
-        <p>Ready for a refill? Scan the QR code to instantly add the items back to your cart.</p>
+        <p>Ready for a refill? Grab the containers from your last order and scan the QR code with our app or your phone’s camera. This instantly adds the items back to your cart, making reordering a breeze.</p>
       </div>
 
       <div class="step">
         <h3>SHARE & REUSE</h3>
-        <p>Leave your empty containers outside. We’ll pick them up, clean them, and reuse them.</p>
+        <p>When we deliver your new order, simply leave your empty containers outside. We’ll pick them up, clean them thoroughly, and reuse them for future deliveries.</p>
       </div>
     </div>
   </section>
 
-  <section class="products">
-    <h2>POPULAR PRODUCE</h2>
+  <section class="products popular-products">
+    <h2>POPULAR PRODUCTS</h2>
 
     <div class="product-grid">
       <article class="product">
@@ -141,11 +148,25 @@
     <div class="newsletter">
       <h3>STAY UPDATED</h3>
       <p>Sign up for our newsletter to be the first to know about new produce or other exciting news!</p>
-      <form>
-        <input type="text" placeholder="First name" />
-        <input type="email" placeholder="E-mail address" />
-        <button type="submit">Send</button>
-      </form>
+  <form>
+  <label for="firstName" class="sr-only">First name</label>
+  <input 
+    type="text" 
+    id="firstName" 
+    name="firstName"
+    placeholder="First name" 
+  />
+
+  <label for="email" class="sr-only">E-mail address</label>
+  <input 
+    type="email" 
+    id="email" 
+    name="email"
+    placeholder="E-mail address" 
+  />
+
+  <button type="submit">Send</button>
+</form>
     </div>
   </footer>
 

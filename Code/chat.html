@@ -11,7 +11,14 @@
 
 <body class="chat-body">
   <header class="topbar">
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <button 
+        class="menu-btn" 
+        id="menuBtn" 
+        aria-label="Open menu" 
+        aria-expanded="false"
+        aria-controls="sideMenu">
+        ☰
+    </button>
     <a href="index.html" class="logo">FRAM</a>
     <div class="status-dot">0</div>
   </header>
@@ -46,8 +53,12 @@
         Failed to connect. Wait and try again later.
       </div>
 
+   
       <form class="chat-form" id="chatForm">
-        <textarea id="chatInput" rows="1"></textarea>
+        <label for="chatInput" class="sr-only">Write message</label>
+        <textarea
+          id="chatInput"
+          placeholder="Write your message..."></textarea>
         <button type="submit" id="sendBtn">↑</button>
       </form>
     </div>
