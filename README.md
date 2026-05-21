@@ -81,12 +81,14 @@ For security reasons, the API key is not included in this repository. A placehol
 1.	Create an OpenAI account at:
 https://platform.openai.com/
 2.	Generate an API key:
-    •	Go to: API Keys
-    •	Click: Create new secret key
-3.	Open script.js
-4.	Find this code:
+
+  	•	Go to: API Keys
+
+  	•	Click: Create new secret key
+4.	Open script.js
+5.	Find this code:
 const apiKey = "DIN_OPENAI_API_KEY_HER";
-5.	Replace the placeholder with your own OpenAI API key
+6.	Replace the placeholder with your own OpenAI API key
 
 Important:
 Do not upload your real API key to GitHub.
