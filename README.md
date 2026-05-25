@@ -1,10 +1,6 @@
-# Project-Assignment
-Final project assignment
-README
-Final project assignment – PRO1001 Frontend Essentials
+# Project-Assignment - PRO1001 Frontend Essentials
 
-
-## **Project Description**
+## Project Description
 This project is a responsive sustainable food delivery webshop built with HTML, CSS, and JavaScript. The website connects users with fresh products from local farms in Norway while focusing on sustainability and easy online ordering.
 
 The project includes:
@@ -15,24 +11,26 @@ The project includes:
 
 •	A chatbot powered by the OpenAI API
 
-•	A form in the footer to sign up for newsletter
+•	A newsletter sign-up form in the footer
 
 •	Integration with the Google Maps API to display partner farm locations
 
 The website is designed with responsiveness, accessibility, and performance in mind.
 
 
-## **Setup and Installation**
+## Setup and Installation
 1.	Clone the repository: 
 git clone https://github.com/MajaTT34/Project-Assignment.git
 2.	Open the project folder:
 cd project-name
-3.	Add your own Google Maps API key in the JavaScript file as described under
+3.	Add your own Google Maps API key in the JavaScript file as described under.
 Do not upload your real API key to GitHub!
 
-Google Maps API
+**Google Maps API**
+
 This project uses the Google Maps Embed API to display the farm location on the products page.
-o	For security reasons, the API key is not included in this repository. A placeholder (`YOUR_API_KEY`) is used instead.
+
+For security reasons, the API key is not included in this repository. A placeholder (`YOUR_API_KEY`) is used instead.
 
 **How to add your API key**
 1.	Create a Google Maps API key through Google Cloud Console: https://console.cloud.google.com/
@@ -90,7 +88,7 @@ https://platform.openai.com/
 const apiKey = "DIN_OPENAI_API_KEY_HER";
 6.	Replace the placeholder with your own OpenAI API key
 
-Important:
+**Important:**
 Do not upload your real API key to GitHub.
 
 ## **Ethical considerations:**
@@ -105,7 +103,8 @@ You can run the project locally by:
 •	Opening the index.html file directly in your browser, or
 
 •	Using the VS Code Live Server extension for a better development experience
-No additional installations or backend setup are required.
+
+No backend is included in this project. The application runs entirely in the browser using HTML, CSS, and JavaScript.
 
 ## **Technologies Used**
 •	HTML5
@@ -138,6 +137,8 @@ No additional installations or backend setup are required.
 •	Google Maps and OpenAI functionality require an internet connection and valid API keys
 
 •	No payment or checkout system is implemented
+
+•	Because this project is frontend-only, the OpenAI API key is exposed in the browser during development. In a production environment, the API requests should be handled through a secure backend server.
 
 ## **Future Improvements**
 •	Add a shopping cart and checkout functionality
