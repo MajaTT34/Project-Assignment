@@ -22,8 +22,8 @@ The website is designed with responsiveness, accessibility, and performance in m
 1.	Clone the repository: 
 git clone https://github.com/MajaTT34/Project-Assignment.git
 2.	Open the project folder:
-cd project-name
-3.	Add your own Google Maps API key in the JavaScript file as described under.
+cd Project-Assignment
+3.	Add your own API keys in the relevant HTML and JavaScript files as described below.
 Do not upload your real API key to GitHub!
 
 **Google Maps API**
@@ -91,13 +91,13 @@ const apiKey = "DIN_OPENAI_API_KEY_HER";
 **Important:**
 Do not upload your real API key to GitHub.
 
-## **Ethical considerations:**
+## Ethical considerations:
 AI-generated responses may sometimes contain incorrect or misleading information. Because of this, the chatbot is designed to provide short and general answers only. 
 
 The project does not store user conversations or personal data. Users are advised not to share personal or sensitive information in the chatbot.
 
 
-## **How to run locally**
+## How to run locally
 You can run the project locally by:
 
 •	Opening the index.html file directly in your browser, or
@@ -106,7 +106,7 @@ You can run the project locally by:
 
 No backend is included in this project. The application runs entirely in the browser using HTML, CSS, and JavaScript.
 
-## **Technologies Used**
+## Technologies Used
 •	HTML5
 
 •	CSS3
@@ -117,7 +117,7 @@ No backend is included in this project. The application runs entirely in the bro
 
 •	Google Maps Embed API
 
-## **Accessibility**
+## Accessibility
 •	Semantic HTML
 
 •	ARIA attributes
@@ -129,7 +129,7 @@ No backend is included in this project. The application runs entirely in the bro
 •	Accessible labels and screen-reader support
 
 
-## **Known Limitations**
+## Known Limitations
 •	The project does not include a backend or database
 
 •	Products and form submissions are static and not permanently stored
@@ -140,7 +140,7 @@ No backend is included in this project. The application runs entirely in the bro
 
 •	Because this project is frontend-only, the OpenAI API key is exposed in the browser during development. In a production environment, the API requests should be handled through a secure backend server.
 
-## **Future Improvements**
+## Future Improvements
 •	Add a shopping cart and checkout functionality
 
 •	Connect the project to a backend and database
